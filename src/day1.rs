@@ -23,7 +23,7 @@ fn part1(input: &Vec<u32>) {
 fn part2(input: &Vec<u32>) {
     for (index1, num1) in input.iter().enumerate() {
         for (index2, num2) in &mut input[index1..].iter().enumerate() {
-            for num3 in &input[(index1+index2)..] {
+            for num3 in &input[(index1 + index2)..] {
                 if num1 + num2 + num3 != 2020 { continue; }
                 println!("{} + {} + {} = {}", num1, num2, num3, num1 + num2 + num3);
                 println!("{} * {} * {} = {}", num1, num2, num3, num1 * num2 * num3);
