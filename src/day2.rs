@@ -1,9 +1,5 @@
-extern crate regex;
-
-use regex::Regex;
-
 pub fn run() {
-    let re = Regex::new(r"^(\d{1,2})-(\d{1,2}) ([a-z]): ([a-z]+)$").unwrap();
+    let re = regex::Regex::new(r"^(\d{1,2})-(\d{1,2}) ([a-z]): ([a-z]+)$").unwrap();
 
     println!("--- DAY 02 ---");
     let input = include_str!("resources/input02.txt")
