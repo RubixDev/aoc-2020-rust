@@ -3,8 +3,8 @@ struct Slope {
     down: u8,
 }
 
-fn drive_slope(slope: Slope, map: &Vec<Vec<char>>) -> u8 {
-    let mut count: u8 = 0;
+fn drive_slope(slope: Slope, map: &Vec<Vec<char>>) -> u16 {
+    let mut count: u16 = 0;
     let mut pos_x: u16 = 0;
     for (y, line) in map.iter().enumerate() {
         if slope.down != 1 && y % (slope.down as usize) != 0 {
